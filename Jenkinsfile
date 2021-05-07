@@ -1,4 +1,3 @@
-  
 pipeline {
     environment {
         IMAGE_NAME = "helloworld"
@@ -50,7 +49,7 @@ pipeline {
 	stage('Push image on dockerhub') {
            agent any 
            environment {
-                DOCKERHUB_LOGIN = credentials('dockehub_severine')
+                DOCKERHUB_LOGIN = credentials('dockerhub_severine')
             }
            steps {
                script {
